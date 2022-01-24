@@ -1,0 +1,120 @@
+.standartMultiSearchContent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0 50px 0;
+    position: relative;
+    margin: 0 10px 0 10px
+}
+
+.standartMultiSearchContentCard {
+    margin: 1%;
+}
+
+.standartMultiSearchTitle {
+    font-size: calc(20px + 1vw);
+    background-color: #e62429;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 10px 5%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-left: solid 5px black;
+    border-right: solid 5px black;
+    border-top: solid 5px black;
+}
+
+.standartMultiSearchThumbnail {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.standartMultiSearchThumbnailContainer {
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: solid 5px black;
+    border-left: solid 5px black;
+    border-right: solid 5px black;
+}
+
+.standartMultiSearchThumbnail:hover {
+    transform: scale(1.2);
+}
+
+.standartMultiSearchTitleStories {
+    border: solid black 5px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    background-color: #e62429;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 10px 5%;
+
+}
+
+.standartSingleSearchBarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.standartSingleSearchBar>button {
+    display: none;
+}
+
+.standartSingleSearchBar {
+    margin: 5px 0 20px 0;
+    border: none !important;
+    width: 25%;
+}
+
+.standartSingleSearchBar .react-search-field-input {
+    border: solid 3px !important;
+    border-radius: 20px;
+    height: 45px !important;
+    font-size: 1.5rem !important;
+}
+
+.standartMultiPaginationContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.standartMultiPagination {
+    background-color: #0c0c0c;
+    border-radius: 20px;
+}
+
+.standartMultiPagination .MuiPagination-ul>li>button {
+    font-size: 2vh;
+    color: white;
+    margin: 5px 0;
+}
+
+.standartMultiPagination .MuiPagination-ul>li>button svg {
+    font-size: 3vh !important;
+}
+
+.standartMultiPagination .css-10w330c-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover {
+    background-color: rgb(230 36 41);
+    color: #ffffff;
+}
+
+.standartMultiPagination .css-10w330c-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background-color: rgb(230 36 41);
+    color: #ffffff;
+}
+
+.standartMultiPagination .css-1v2lvtn-MuiPaginationItem-root {
+    font-size: 1.5rem;
+    color: white
+}
+
+.standartLoading {
+    position: fixed;
+    top: 40vh;
+    left: 48%;
+    z-index: 2;
+}

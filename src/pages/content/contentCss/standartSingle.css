@@ -1,0 +1,154 @@
+.standartPrimaryContainer {
+    padding: 8% 0 3% 0;
+}
+
+.standartSingleThumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.standartSingleContentCard {
+    width: 80%;
+}
+
+.standartSingleTitle {
+    font-size: 3rem;
+    background-color: #e62429;
+    color: white;
+    margin: 0;
+    padding: 10px 5%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.standartSingleImg {
+    width: 70%;
+    border-radius: 5%;
+}
+
+.standartSingleContainerImg {
+    display: flex;
+    justify-content: center;
+}
+
+.standartSingleContentContainer {
+    background-color: #e62429;
+    color: #f0e401;
+    opacity: 0.9;
+    margin: 0 15%;
+    padding: 0 10% 5% 10%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.standartSingleContentTitle {
+    font-size: 2.2rem;
+    color: #f0e401;
+    margin: 10px 0;
+}
+
+.standartSingleContentSubTitle {
+    font-size: 1.8rem;
+    color: #f0e401;
+}
+
+.standartSingleContentText {
+    font-size: 1.8rem;
+    color: white
+}
+
+.standartSingleUpc {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.standartSingleUrl {
+    text-transform: capitalize;
+    color: currentcolor;
+    transition: 0.2s;
+}
+
+.standartSingleUrl:hover {
+    color: black
+}
+
+.standartSingleUrlAncor>div {
+    transition: 0.2s;
+}
+
+.standartSingleUrlAncor:hover>div {
+    color: black
+}
+
+.standartCreatorsName, .standartUrlType {
+    text-transform: capitalize;
+}
+
+.standartSinglePages {
+    display: flex;
+    align-items: center;
+}
+
+.standartSinglePrice {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.standartSinglePrice:after {
+    content: "";
+    border-bottom: solid 2px;
+    position: absolute;
+    width: 40%;
+}
+
+.standartSingleMarginRight {
+    margin-right: 10px;
+}
+
+.standartSingleMarginLeft {
+    margin-left: 10px;
+}
+
+.standartSingleCreators {
+    margin-bottom: 15px;
+    position: relative
+}
+
+.standartSingleCreators:after {
+    content: "";
+    border-bottom: solid 2px;
+    position: absolute;
+    width: 40%;
+}
+
+.standartSingleCreators:last-child {
+    margin-bottom: 0
+}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 992px) {
+    .standartSingleContentContainer {
+        margin: 0 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .standartSingleContentContainer {
+        margin: 0 5%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .standartSingleContentContainer {
+        margin: 0 3%;
+    }
+
+}

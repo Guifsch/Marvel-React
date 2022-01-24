@@ -1,0 +1,321 @@
+@import "normalize.css";
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Marvel', sans-serif;
+}
+
+.AppBar {
+  position: fixed;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.backButtonContainer {
+  color: white;
+  padding: 5px;
+  background-color: #e62429;
+  transition: 0.2s;
+  font-size: 2rem;
+}
+
+.homeButtonContainer {
+  padding: 5px;
+  transition: 0.2s;
+  font-size: 2rem;
+  color: white;
+  background-color: #e62429;
+}
+
+.backButtonContainer:hover, .homeButtonContainer:hover {
+  color: white;
+  background-color: black
+}
+
+.backButton {
+  color: white !important;
+  font-size: 2.5rem !important;
+  font-family: 'Marvel', sans-serif !important;
+  padding: 0.5rem !important;
+  line-height: normal !important;
+  transition: 0.2s !important;
+
+}
+
+.backButton:hover {
+  background-color: black !important;
+}
+
+.backgroundImage {
+  text-align: center;
+  background-image: url("./assets/background.png");
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  position: fixed;
+}
+
+.index {
+  width: 800px;
+  height: 90%;
+}
+
+.imageHome {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.relative {
+  position: relative;
+}
+
+.centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  background-color: #e62429;
+  color: white;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  transition: 0.2s;
+}
+
+/* -----firstLine------- */
+
+.firstLine, .secondLine, .thirdLine {
+  display: flex;
+  width: 100%;
+  height: 33.333333333333%;
+}
+
+.characters {
+  width: 45%;
+  margin: 0 10px 10px 0;
+  border: solid 5px #1e1818;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+.comics {
+  width: 55%;
+  margin: 0 0 10px 10px;
+  border: solid 5px #1e1818;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+/* ------------ */
+
+/* -----secondLine ------- */
+
+.creators {
+  width: 25%;
+  margin: 10px 10px 10px 0;
+  border: solid 5px #1e1818;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+.creatorsResponsive {
+  width: 25%;
+  display: none;
+  margin: 10px 10px 10px 0;
+  border: solid 5px #1e1818;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+.events {
+  border: solid 5px #1e1818;
+  background-size: cover;
+  width: 75%;
+  margin: 10px 0 10px 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+/* ------------ */
+
+/* -----thirdLine------- */
+
+.series {
+  width: 65%;
+  margin: 10px 10px 0 0;
+  border: solid 5px #1e1818;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+.stories {
+  width: 35%;
+  margin: 10px 0 0 10px;
+  border: solid 5px #1e1818;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+.storiesResponsive {
+  width: 35%;
+  display: none;
+  margin: 10px 0 0 10px;
+  border: solid 5px #1e1818;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 6px 10px -1px #000000;
+}
+
+/* ------------ */
+
+.characters:hover>span, .comics:hover>span, .creators:hover>span, .events:hover>span, .series:hover>span, .stories:hover>span {
+  background-color: #000000;
+}
+
+.characters img:nth-child(2), .comics img:nth-child(2), .creators img:nth-child(2), .events img:nth-child(2), .series img:nth-child(2), .stories img:nth-child(2), .creatorsResponsive img:nth-child(2), .storiesResponsive img:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.characters:hover img:nth-child(2), .comics:hover img:nth-child(2), .creators:hover img:nth-child(2), .events:hover img:nth-child(2), .series:hover img:nth-child(2), .stories:hover img:nth-child(2), .storiesResponsive:hover img:nth-child(2) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.copyright a {
+  color: black;
+  transition: 0.2s;
+}
+
+.copyright a:hover, .standartMultiDrawerList a:hover, .standartMultiDrawer .css-i4bv87-MuiSvgIcon-root:hover {
+  color: #e62429;
+}
+
+.standartMultiDrawer .css-ciy9n4-MuiPaper-root-MuiAppBar-root {
+  background-color: black
+}
+
+.standartMultiDrawer .css-jzk4qw-MuiPaper-root-MuiAppBar-root {
+  background-color: #e62429;
+}
+
+.standartMultiDrawer .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  background-image: url("./assets/backgroundDrawer.png");
+  color: black;
+  border-right: solid 5px;
+}
+
+.standartMultiDrawer .css-i4bv87-MuiSvgIcon-root {
+  font-size: 3rem;
+  transition: 0.2s;
+}
+
+.standartMultiDrawerList {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(12px + 2vw);
+  margin: 0 15px 0 15px !important;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.standartMultiDrawerList a {
+  color: black;
+  transition: 0.2s;
+  margin: 5px 0;
+  padding: 0 0 0 10px;
+  box-shadow: 0px 2px 5px black;
+}
+
+.css-8u39c-MuiTypography-root {
+  font-family: 'Marvel', sans-serif !important;
+}
+
+
+@media (max-width: 992px) {
+  .index {
+    width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .index {
+    width: 550px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .firstLine, .secondLine, .thirdLine {
+    flex-wrap: wrap;
+    height: 80%;
+  }
+
+  .css-1f2xuhi-MuiDrawer-docked .MuiDrawer-paper {
+    width: 100% !important;
+  }
+
+  .characters, .comics, .creators, .events, .series, .stories, .creatorsResponsive, .storiesResponsive {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .copyright {
+    top: 10px;
+  }
+
+  .creators, .stories {
+    display: none;
+  }
+
+  .creatorsResponsive, .storiesResponsive {
+    display: flex;
+  }
+
+
+}
