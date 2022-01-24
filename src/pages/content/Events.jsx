@@ -17,10 +17,12 @@ const Events = () => {
 
   useEffect(() => {
     searchEvents((page - 1) * 20);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   useEffect(() => {
     searchEvents();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue]);
 
   const searchEvents = async (offset) => {

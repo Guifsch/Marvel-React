@@ -17,10 +17,12 @@ const Characters = () => {
 
   useEffect(() => {
     searchCharacters((page - 1) * 20);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   useEffect(() => {
     searchCharacters();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue]);
 
   const searchCharacters = async (offset) => {

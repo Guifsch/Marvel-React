@@ -14,6 +14,7 @@ const Stories = () => {
 
   useEffect(() => {
     searchStories((page - 1) * 20);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const searchStories = async (offset) => {

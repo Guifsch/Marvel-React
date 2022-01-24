@@ -17,10 +17,12 @@ const Creators = () => {
 
   useEffect(() => {
     searchCreators((page - 1) * 20);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   useEffect(() => {
     searchCreators();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue]);
 
   const searchCreators = async (offset) => {

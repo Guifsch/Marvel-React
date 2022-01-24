@@ -31,7 +31,7 @@ html, body, #root {
 
 .backButtonContainer {
   color: white;
-  padding: 5px;
+  padding-right: 5px;
   background-color: #e62429;
   transition: 0.2s;
   font-size: 2rem;

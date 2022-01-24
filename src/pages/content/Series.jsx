@@ -17,10 +17,12 @@ const Series = () => {
 
   useEffect(() => {
     searchSeries((page - 1) * 20);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   useEffect(() => {
     searchSeries();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue]);
 
   const searchSeries = async (offset) => {

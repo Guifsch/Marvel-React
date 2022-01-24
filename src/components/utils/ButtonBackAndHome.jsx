@@ -10,13 +10,13 @@ const ButtonBackAndHome = ({ backButtonText }) => {
           HOME
         </a>
       ) : (
-        <a
+        <div
           className="backButtonContainer"
           onClick={() => navigate(-1)}
           role="button"
         >
           BACK
-        </a>
+        </div>
       )}
     </div>
   );
