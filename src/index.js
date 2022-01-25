@@ -23,7 +23,7 @@ render(
   <BrowserRouter>
     <div className="backgroundImage" />
     <Routes>
-      <Route path="/home" element={<App />} />
+      <Route path="/Marvel-React" element={<App />} />
       <Route path="characters" element={<Characters />} />
       <Route path={`/characters/:Id`} element={<Character />} />
       <Route path="comics" element={<Comics />} />

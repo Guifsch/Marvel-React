@@ -6,7 +6,7 @@ const ButtonBackAndHome = ({ backButtonText }) => {
   return (
     <div>
       {backButtonText ? (
-        <a href="/home" className="homeButtonContainer" role="button" alt="">
+        <a href="/Marvel-React" className="homeButtonContainer" role="button" alt="">
           HOME
         </a>
       ) : (
