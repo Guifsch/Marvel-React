@@ -218,6 +218,7 @@ html, body, #root {
 .copyright {
   position: absolute;
   bottom: 0;
+  height: 30px;
   font-weight: 900;
   font-size: 1.3rem;
   margin-bottom: 5px;
