@@ -36,7 +36,7 @@ const Stories = () => {
   };
 
   return (
-    <div className="row standartMultiSearchContent">
+    <div className="standartMultiSearchContent">
       <div className="standartMultiDrawer">
         <Drawer className="standartMultiDrawer" />
       </div>
@@ -51,16 +51,13 @@ const Stories = () => {
       ) : (
         false
       )}
-
-      {storiesContent.map((item) => (
-        <Link
-          to={`/stories/${item.id}`}
-          className="pb-4 col-12 col-sm-6 col-lg-3"
-          key={item.id}
-        >
-          <h1 className="standartMultiSearchTitleStories">{item.title}</h1>
-        </Link>
-      ))}
+      <div className="standartMultiGrid">
+        {storiesContent.map((item) => (
+          <Link to={`/stories/${item.id}`} key={item.id}>
+            <h1 className="standartMultiSearchTitleStories">{item.title}</h1>
+          </Link>
+        ))}
+      </div>
       <div className="standartMultiPaginationContainer">
         <Pagination
           className="standartMultiPagination"

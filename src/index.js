@@ -15,6 +15,7 @@ import Series from "./pages/content/Series";
 import Serie from "./pages/content/Serie";
 import Stories from "./pages/content/Stories";
 import Storie from "./pages/content/Storie";
+import ButtonTopBottomArrows from './components/utils/ButtonTopBottomArrows'
 
 import "./App.css";
 
@@ -22,8 +23,10 @@ const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <div className="backgroundImage" />
+    <ButtonTopBottomArrows showBelow={250} />
+    <ButtonTopBottomArrows showBelow={250} someValue={"someValue"} />
     <Routes>
-      <Route path="/Marvel-React" element={<App />} />
+      <Route path="/" element={<App />} />
       <Route path="characters" element={<Characters />} />
       <Route path={`/characters/:Id`} element={<Character />} />
       <Route path="comics" element={<Comics />} />

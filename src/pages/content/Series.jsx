@@ -47,7 +47,7 @@ const Series = () => {
   };
 
   return (
-    <div className="row standartMultiSearchContent">
+    <div className="standartMultiSearchContent">
       <div className="standartMultiDrawer">
         <Drawer className="standartMultiDrawer" />
       </div>
@@ -62,34 +62,35 @@ const Series = () => {
       ) : (
         false
       )}
-      <div className="standartSingleSearchBarContainer">
+      <div className="standartMultiSearchBarContainer">
         <SearchField
           placeholder="Press Enter to search..."
           onEnter={handleChangeSearch}
-          classNames="standartSingleSearchBar"
+          classNames="standartMultiSearchBar"
         />
       </div>
-
-      {seriesContent.map((item) => (
-        <Link
-          to={`/series/${item.id}`}
-          className="pb-4 col-12 col-sm-6 col-lg-3"
-          key={item.id}
-        >
-          <h1 className="standartMultiSearchTitle">{item.title}</h1>
-          <div className="standartMultiSearchThumbnailContainer">
-            <img
-              className="standartMultiSearchThumbnail"
-              src={item.thumbnail.path + ".jpg"}
-              alt=""
-              onError={({ currentTarget }) => {
-                currentTarget.onerror = null; // prevents looping
-                currentTarget.src = ImageNotFound;
-              }}
-            />
-          </div>
-        </Link>
-      ))}
+      <div className="standartMultiGrid">
+        {seriesContent.map((item) => (
+          <Link
+            to={`/series/${item.id}`}
+            key={item.id}
+          >
+            <div className="standartMultiSearchThumbnailContainer">
+            <h1 className="standartMultiSearchTitle">{item.title}</h1>
+              <img
+                className="standartMultiSearchThumbnail"
+                src={item.thumbnail.path + ".jpg"}
+                alt=""
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = ImageNotFound;
+                }}
+              />
+              
+            </div>
+          </Link>
+        ))}
+      </div>
       <div className="standartMultiPaginationContainer">
         <Pagination
           className="standartMultiPagination"

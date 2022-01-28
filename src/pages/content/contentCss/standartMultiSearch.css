@@ -1,41 +1,81 @@
-.standartMultiSearchContent {
+/* .standartMultiSearchContent {
     display: flex;
     flex-wrap: wrap;
     padding: 70px 0 50px 0;
     position: relative;
     margin: 0 10px 0 10px
+} */
+.standartMultiSearchContent {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0 50px 0;
+    position: relative;
+    margin: 0 10px 0 10px;
+}
+
+.standartMultiGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 5px 10px 15px 10px;
 }
 
 .standartMultiSearchContentCard {
     margin: 1%;
 }
 
-.standartMultiSearchTitle {
+/* .standartMultiSearchTitle {
     font-size: calc(20px + 1vw);
-    background-color: #e62429;
+    background-color: black;
     color: white;
     width: 100%;
     margin: 0;
     padding: 10px 5%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-left: solid 5px black;
+    border-right: solid 5px black;
+    border-top: solid 5px black;
+} */
+
+.standartMultiSearchTitle {
+    font-size: calc(20px + 1vw);
+    background-color: black;
+    color: white;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    margin: 0;
+    padding: 5px;
     border-left: solid 5px black;
     border-right: solid 5px black;
     border-top: solid 5px black;
 }
 
+/* .standartMultiSearchThumbnail {
+    width: 100%;
+    transition: 0.5s;
+} */
 .standartMultiSearchThumbnail {
     width: 100%;
+    height: calc(400px - 0.5vw);
+    object-fit: cover;
     transition: 0.5s;
 }
 
-.standartMultiSearchThumbnailContainer {
+/* .standartMultiSearchThumbnailContainer {
     overflow: hidden;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     border-bottom: solid 5px black;
     border-left: solid 5px black;
     border-right: solid 5px black;
+} */
+.standartMultiSearchThumbnailContainer {
+    overflow: hidden;
+    border-bottom: solid 5px black;
+    border-left: solid 5px black;
+    border-right: solid 5px black;
+    border-top: solid 5px black;
+    border-radius: 30px;
+    position: relative;
 }
 
 .standartMultiSearchThumbnail:hover {
@@ -49,28 +89,28 @@
     background-color: #e62429;
     color: white;
     width: 100%;
-    margin: 0;
+    margin: 10px;
     padding: 10px 5%;
 
 }
 
-.standartSingleSearchBarContainer {
+.standartMultiSearchBarContainer {
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
 
-.standartSingleSearchBar>button {
+.standartMultiSearchBar>button {
     display: none;
 }
 
-.standartSingleSearchBar {
+.standartMultiSearchBar {
     margin: 5px 0 20px 0;
     border: none !important;
     width: 25%;
 }
 
-.standartSingleSearchBar .react-search-field-input {
+.standartMultiSearchBar .react-search-field-input {
     border: solid 3px !important;
     border-radius: 20px;
     height: 45px !important;
@@ -117,4 +157,68 @@
     top: 40vh;
     left: 48%;
     z-index: 2;
+}
+
+.standartMultiButtonBackToTop {
+    z-index: 2;
+    position: fixed !important;
+    background-color: black !important;
+    right: 15px;
+    bottom: 170px;
+    width: 50px;
+    height: 50px;
+}
+
+.standartMultiButtonGoToBotton {
+    z-index: 2;
+    position: fixed !important;
+    background-color: black !important;
+    right: 15px;
+    bottom: 105px;
+    width: 50px;
+    height: 50px;
+}
+
+.standartMultiButtonBackToTop .css-i4bv87-MuiSvgIcon-root, .standartMultiButtonGoToBotton .css-i4bv87-MuiSvgIcon-root {
+    font-size: 3rem;
+    color: white;
+    border: solid 1px red;
+    border-radius: 30px;
+}
+
+@media (max-width: 1200px) {
+    .standartMultiGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .standartMultiGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .standartMultiSearchTitle {
+        font-size: 2.5rem;
+    }
+
+    .standartMultiSearchThumbnail {
+        height: 100%;
+    }
+
+    .standartMultiSearchBar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .standartMultiSearchContent {
+        padding: 110px 0 50px 0;
+    }
+
+    .standartMultiDrawer .css-i4bv87-MuiSvgIcon-root {
+        font-size: 5rem;
+    }
+
+
 }

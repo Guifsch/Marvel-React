@@ -15,7 +15,6 @@
 
 .standartSingleTitle {
     font-size: 3rem;
-    background-color: #e62429;
     color: white;
     margin: 0;
     padding: 10px 5%;
@@ -27,7 +26,6 @@
 
 .standartSingleImg {
     width: 70%;
-    border-radius: 5%;
 }
 
 .standartSingleContainerImg {
@@ -36,11 +34,11 @@
 }
 
 .standartSingleContentContainer {
-    background-color: #e62429;
+    background-color: black;
     color: #f0e401;
-    opacity: 0.9;
+    opacity: 0.96;
     margin: 0 15%;
-    padding: 0 10% 5% 10%;
+    padding: 0 5% 5% 5%;
     display: flex;
     flex-direction: column;
 
@@ -83,7 +81,7 @@
 }
 
 .standartSingleUrlAncor:hover>div {
-    color: black
+    color: #d8ff00;
 }
 
 .standartCreatorsName, .standartUrlType {
@@ -125,13 +123,12 @@
     border-bottom: solid 2px;
     position: absolute;
     width: 40%;
+    color: white;
 }
 
 .standartSingleCreators:last-child {
     margin-bottom: 0
 }
-
-@media (max-width: 1199.98px) {}
 
 @media (max-width: 992px) {
     .standartSingleContentContainer {
@@ -150,5 +147,4 @@
     .standartSingleContentContainer {
         margin: 0 3%;
     }
-
 }

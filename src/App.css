@@ -317,6 +317,17 @@ html, body, #root {
   .creatorsResponsive, .storiesResponsive {
     display: flex;
   }
-
+  .backButtonContainer {
+    padding: 5px 10px;
+    font-size: 2.5rem;
+  }
+  .homeButtonContainer {
+    padding: 11px 10px;
+    margin-left: 20px;
+    font-size: 2.5rem;
+  }
+  .css-3v9zut {
+    justify-content: space-between!important;
+  }
 
 }

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./App.css";
 
+// import MyContext from "./context/myContext";
+
 import image1 from "./assets/image1.png";
 import image1colorized from "./assets/image1colorized.png";
 import image2 from "./assets/image2.png";
@@ -20,66 +22,79 @@ import image6responsiveColorized from "./assets/image6responsive.png";
 
 export default function App() {
   return (
-    <div className="App">
-      <div className="index">
-        <div className="firstLine">
-          <Link to="/characters" className="characters centerContent relative">
-            <img className="imageHome" src={image1} alt="" />
-            <img className="imageHome" src={image1colorized} alt="" />
-            <span className="title">CHARACTERS</span>
-          </Link>
-          <Link to="/comics" className="comics centerContent relative">
-            <img className="imageHome" src={image2} alt="" />
-            <img className="imageHome" src={image2colorized} alt="" />
-            <span className="title">COMICS</span>
-          </Link>
+    // <MyContext.Provider>
+      <div className="App">
+        <div className="index">
+          <div className="firstLine">
+            <Link
+              to="/characters"
+              className="characters centerContent relative"
+            >
+              <img className="imageHome" src={image1} alt="" />
+              <img className="imageHome" src={image1colorized} alt="" />
+              <span className="title">CHARACTERS</span>
+            </Link>
+            <Link to="/comics" className="comics centerContent relative">
+              <img className="imageHome" src={image2} alt="" />
+              <img className="imageHome" src={image2colorized} alt="" />
+              <span className="title">COMICS</span>
+            </Link>
+          </div>
+          <div className="secondLine">
+            <Link to="/creators" className="creators centerContent relative">
+              <img className="imageHome" src={image3} alt="" />
+              <img className="imageHome" src={image3colorized} alt="" />
+              <span className="title">CREATORS</span>
+            </Link>
+            <Link
+              to="/creators"
+              className="creatorsResponsive centerContent relative"
+            >
+              <img className="imageHome" src={image3responsive} alt="" />
+              <img
+                className="imageHome"
+                src={image3responsiveColorized}
+                alt=""
+              />
+              <span className="title">CREATORS</span>
+            </Link>
+            <Link to="/events" className="events centerContent relative">
+              <img className="imageHome" src={image4} alt="" />
+              <img className="imageHome" src={image4colorized} alt="" />
+              <span className="title">EVENTS</span>
+            </Link>
+          </div>
+          <div className="thirdLine">
+            <Link to="/series" className="series centerContent relative">
+              <img className="imageHome" src={image5} alt="" />
+              <img className="imageHome" src={image5colorized} alt="" />
+              <span className="title">SERIES</span>
+            </Link>
+            <Link to="/stories" className="stories centerContent relative">
+              <img className="imageHome" src={image6} alt="" />
+              <img className="imageHome" src={image6colorized} alt="" />
+              <span className="title">STORIES</span>
+            </Link>
+            <Link
+              to="/stories"
+              className="storiesResponsive centerContent relative"
+            >
+              <img className="imageHome" src={image6responsive} alt="" />
+              <img
+                className="imageHome"
+                src={image6responsiveColorized}
+                alt=""
+              />
+              <span className="title">CREATORS</span>
+            </Link>
+          </div>
         </div>
-        <div className="secondLine">
-          <Link to="/creators" className="creators centerContent relative">
-            <img className="imageHome" src={image3} alt="" />
-            <img className="imageHome" src={image3colorized} alt="" />
-            <span className="title">CREATORS</span>
-          </Link>
-          <Link
-            to="/creators"
-            className="creatorsResponsive centerContent relative"
-          >
-            <img className="imageHome" src={image3responsive} alt="" />
-            <img className="imageHome" src={image3responsiveColorized} alt="" />
-            <span className="title">CREATORS</span>
-          </Link>
-          <Link to="/events" className="events centerContent relative">
-            <img className="imageHome" src={image4} alt="" />
-            <img className="imageHome" src={image4colorized} alt="" />
-            <span className="title">EVENTS</span>
-          </Link>
-        </div>
-        <div className="thirdLine">
-          <Link to="/series" className="series centerContent relative">
-            <img className="imageHome" src={image5} alt="" />
-            <img className="imageHome" src={image5colorized} alt="" />
-            <span className="title">SERIES</span>
-          </Link>
-          <Link to="/stories" className="stories centerContent relative">
-            <img className="imageHome" src={image6} alt="" />
-            <img className="imageHome" src={image6colorized} alt="" />
-            <span className="title">STORIES</span>
-          </Link>
-          <Link
-            to="/stories"
-            className="storiesResponsive centerContent relative"
-          >
-            <img className="imageHome" src={image6responsive} alt="" />
-            <img className="imageHome" src={image6responsiveColorized} alt="" />
-            <span className="title">CREATORS</span>
-          </Link>
+        <div className="copyright">
+          <a href="http://marvel.com" alt="" rel="noreferrer" target="_blank">
+            Data provided by Marvel. © 2022 MARVEL
+          </a>
         </div>
       </div>
-      <div className="copyright">
-        <a href="http://marvel.com" alt="" rel="noreferrer" target="_blank">
-          Data provided by Marvel. © 2022 MARVEL
-        </a>
-      </div>
-    </div>
+    // </MyContext.Provider>
   );
 }

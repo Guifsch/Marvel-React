@@ -111,7 +111,6 @@ const Creator = () => {
                     key={stories.resourceURI}
                   >
                     <div
-                      key={stories.name}
                       className="standartSingleContentText"
                       role="button"
                     >
@@ -131,10 +130,9 @@ const Creator = () => {
                   <a
                     href={searchUrl(events.resourceURI)}
                     className="standartSingleUrlAncor"
-                    key={events.name}
+                    key={events.resourceURI}
                   >
                     <div
-                      key={events.resourceURI}
                       className="standartSingleContentText"
                       role="button"
                     >
