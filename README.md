@@ -1,3 +1,29 @@
+Tutorial
+
+How to consume the API
+
+Depedency used on the project
+Node.js(v16.13.1)
+
+Configuration
+
+After you download the project, create an account on the Marvel Developer Portal
+https://developer.marvel.com
+On the root "before src", create a file ".env"
+On the "https://developer.marvel.com/account", you will recieve a Public and a Private key
+Copy and paste on the .env and follow the intructions bellow
+
+REACT_APP_MARVEL_API_BASE = "https://gateway.marvel.com/v1/public/"
+REACT_APP_MARVEL_PUBLIC_KEY = your PUBLIC_KEY
+REACT_APP_MARVEL_PRIVATE_KEY = your PRIVATE_KEY
+REACT_APP_MARVEL_TS = 1
+
+"npm install" or "yarn install" to download the depedencys
+
+"npm run start" or "yarn run start" to start the project
+
+-----------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
