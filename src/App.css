@@ -30,19 +30,19 @@ html, body, #root {
 }
 
 .backButtonContainer {
-  color: white;
-  padding-right: 5px;
-  background-color: #e62429;
+  color: black;
+  font-weight: bolder;
+  padding: 0 5px;
   transition: 0.2s;
   font-size: 2rem;
 }
 
 .homeButtonContainer {
+  color: black;
+  font-weight: bolder;
   padding: 5px;
   transition: 0.2s;
   font-size: 2rem;
-  color: white;
-  background-color: #e62429;
 }
 
 .backButtonContainer:hover, .homeButtonContainer:hover {
@@ -233,46 +233,9 @@ html, body, #root {
   color: #e62429;
 }
 
-.standartMultiDrawer .css-ciy9n4-MuiPaper-root-MuiAppBar-root {
+.gizela {
   background-color: black
 }
-
-.standartMultiDrawer .css-jzk4qw-MuiPaper-root-MuiAppBar-root {
-  background-color: #e62429;
-}
-
-.standartMultiDrawer .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
-  background-image: url("./assets/backgroundDrawer.png");
-  color: black;
-  border-right: solid 5px;
-}
-
-.standartMultiDrawer .css-i4bv87-MuiSvgIcon-root {
-  font-size: 3rem;
-  transition: 0.2s;
-}
-
-.standartMultiDrawerList {
-  display: flex;
-  flex-direction: column;
-  font-size: calc(12px + 2vw);
-  margin: 0 15px 0 15px !important;
-  font-size: 2.5rem;
-  font-weight: 900;
-}
-
-.standartMultiDrawerList a {
-  color: black;
-  transition: 0.2s;
-  margin: 5px 0;
-  padding: 0 0 0 10px;
-  box-shadow: 0px 2px 5px black;
-}
-
-.css-8u39c-MuiTypography-root {
-  font-family: 'Marvel', sans-serif !important;
-}
-
 
 @media (max-width: 992px) {
   .index {
@@ -297,10 +260,6 @@ html, body, #root {
     height: 80%;
   }
 
-  .css-1f2xuhi-MuiDrawer-docked .MuiDrawer-paper {
-    width: 100% !important;
-  }
-
   .characters, .comics, .creators, .events, .series, .stories, .creatorsResponsive, .storiesResponsive {
     width: 100%;
     margin: 10px;
@@ -317,17 +276,16 @@ html, body, #root {
   .creatorsResponsive, .storiesResponsive {
     display: flex;
   }
+
   .backButtonContainer {
     padding: 5px 10px;
     font-size: 2.5rem;
   }
+
   .homeButtonContainer {
     padding: 11px 10px;
     margin-left: 20px;
     font-size: 2.5rem;
-  }
-  .css-3v9zut {
-    justify-content: space-between!important;
   }
 
 }

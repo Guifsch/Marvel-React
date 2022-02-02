@@ -13,14 +13,37 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Link } from "react-router-dom";
 import ButtonBackAndHome from "../../components/utils/ButtonBackAndHome";
+import { makeStyles } from "@material-ui/core/styles";
+import backgroundDrawer from "../../assets/backgroundDrawer.png";
 
-// import ListItem from '@mui/material/ListItem';
-// import ListItemIcon from '@mui/material/ListItemIcon';
-// import ListItemText from '@mui/material/ListItemText';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
-// import MailIcon from '@mui/icons-material/Mail';
+const useStyles = makeStyles({
+  drawerMenu: {
+    backgroundColor: "black",
+  },
+  drawerList: {
+    display: "flex",
+    flexDirection: "column",
+    fontSize: "2.5rem",
+    margin: "0 15px 0 15px !important",
+    fontWeight: 900,
+  },
+  toolBar: {
+    backgroundColor: "black",
+  },
+  toolBarAncor: {
+    color: "black",
+    transition: "0.2s",
+    margin: "5px 0",
+    padding: "0 0 0 10px",
+    boxShadow: "0px 2px 5px black",
+    "&:hover": {
+      color: "#e62429",
+    },
+  },
+});
 
 const drawerWidth = 240;
+
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
@@ -50,7 +73,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
+  const classes = useStyles();
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -63,7 +86,7 @@ export default function PersistentDrawerLeft() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -77,7 +100,7 @@ export default function PersistentDrawerLeft() {
             variant="h6"
             noWrap
             component="div"
-            className="standartDrawerMenu"
+            className={classes.drawerMenu}
           >
             Menu
           </Typography>
@@ -88,46 +111,69 @@ export default function PersistentDrawerLeft() {
           width: drawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
+            width: {
+              xs: "100%", // theme.breakpoints.up('xs')
+              sm: 240, // theme.breakpoints.up('sm')
+            },
             boxSizing: "border-box",
+            backgroundImage: `url(${backgroundDrawer})`,
+            color: "black",
+            borderRight: "solid 5px",
           },
         }}
         variant="persistent"
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader
+          sx={{
+            justifyContent: {
+              xs: "space-between!important",
+              sm: "flex-end!important",
+            },
+          }}
+        >
           <ButtonBackAndHome backButtonText={"someProp"} />
           <ButtonBackAndHome />
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
+              <ChevronLeftIcon
+                sx={{
+                  fontSize: {
+                    xs: "5rem!important",
+                    sm: "3rem!important",
+                  },
+                }}
+              />
             ) : (
               <ChevronRightIcon />
             )}
           </IconButton>
         </DrawerHeader>
 
-        <List className="standartMultiDrawerList">
-          <Link to={"/characters"}>CHARACTERS</Link>
+        <List className={classes.drawerList}>
+          <Link className={classes.toolBarAncor} to={"/characters"}>
+            CHARACTERS
+          </Link>
 
-          <Link to={"/comics"}>COMICS</Link>
-          <Link to={"/creators"}>CREATORS</Link>
+          <Link className={classes.toolBarAncor} to={"/comics"}>
+            COMICS
+          </Link>
+          <Link className={classes.toolBarAncor} to={"/creators"}>
+            CREATORS
+          </Link>
 
-          <Link to={"/events"}>EVENTS</Link>
+          <Link className={classes.toolBarAncor} to={"/events"}>
+            EVENTS
+          </Link>
 
-          <Link to={"/series"}>SERIES</Link>
+          <Link className={classes.toolBarAncor} to={"/series"}>
+            SERIES
+          </Link>
 
-          <Link to={"/stories"}>STORIES</Link>
-
-          {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))} */}
+          <Link className={classes.toolBarAncor} to={"/stories"}>
+            STORIES
+          </Link>
         </List>
       </Drawer>
     </Box>

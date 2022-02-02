@@ -53,15 +53,13 @@ const Comic = () => {
         <div key={item.id} className="standartPrimaryContainer">
           <div className="standartSingleContentContainer">
             <div className="standartSingleThumbnail">
-              <div className="standartSingleContentCard">
-                <h1 className="standartSingleTitle">{item.title}</h1>
-                <div className="standartSingleContainerImg">
-                  <img
-                    className="standartSingleImg"
-                    src={item.thumbnail.path + ".jpg"}
-                    alt=""
-                  />
-                </div>
+              <h1 className="standartSingleTitle">{item.title}</h1>
+              <div className="standartSingleContainerImg">
+                <img
+                  className="standartSingleImg"
+                  src={item.thumbnail.path + ".jpg"}
+                  alt=""
+                />
               </div>
             </div>
             {item.upc ? (
@@ -122,8 +120,8 @@ const Comic = () => {
               </div>
             )}
 
-            {item.prices.map((prices) =>
-              prices.price > 0 ? (
+            {item.prices.length > 0 ? (
+              item.prices.map((prices) => (
                 <div
                   key={prices.type}
                   className="standartSingleContentText standartSinglePrice"
@@ -139,18 +137,18 @@ const Comic = () => {
                   <p>
                     <span className="standartSingleContentTitle">Price:</span>
                     <span className="standartSingleContentText standartSingleMarginLeft">
-                      {prices.price}
+                    {new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(prices.price)}
                     </span>
                   </p>
                 </div>
-              ) : (
-                <div>
-                  <span className="standartSingleContentTitle">Price:</span>{" "}
-                  <span className="standartSingleContentText standartSingleMarginLeft">
-                    Not avaiable
-                  </span>
-                </div>
-              )
+              ))
+            ) : (
+              <div>
+                <span className="standartSingleContentTitle">Price:</span>{" "}
+                <span className="standartSingleContentText standartSingleMarginLeft">
+                  Not avaiable
+                </span>
+              </div>
             )}
 
             <div className="standartSingleContent">

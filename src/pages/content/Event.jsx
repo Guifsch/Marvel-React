@@ -44,15 +44,13 @@ const Event = () => {
         <div key={item.id} className="standartPrimaryContainer">
           <div className="standartSingleContentContainer">
             <div className="standartSingleThumbnail">
-              <div className="standartSingleContentCard">
-                <h1 className="standartSingleTitle">{item.title}</h1>
-                <div className="standartSingleContainerImg">
-                  <img
-                    className="standartSingleImg"
-                    src={item.thumbnail.path + ".jpg"}
-                    alt=""
-                  />
-                </div>
+              <h1 className="standartSingleTitle">{item.title}</h1>
+              <div className="standartSingleContainerImg">
+                <img
+                  className="standartSingleImg"
+                  src={item.thumbnail.path + ".jpg"}
+                  alt=""
+                />
               </div>
             </div>
 

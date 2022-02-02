@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./contentCss/standartSingle.css";
 import { character } from "../../api/CharactersCharacter";
-// import ButtonBackAndHome from "../../components/utils/ButtonBackAndHome";
 import Drawer from "../../components/utils/Drawer";
 
 const Character = () => {
@@ -39,15 +38,13 @@ const Character = () => {
         <div key={item.id} className="standartPrimaryContainer">
           <div className="standartSingleContentContainer">
             <div className="standartSingleThumbnail">
-              <div className="standartSingleContentCard">
-                <h1 className="standartSingleTitle">{item.name}</h1>
-                <div className="standartSingleContainerImg">
-                  <img
-                    className="standartSingleImg"
-                    src={item.thumbnail.path + ".jpg"}
-                    alt=""
-                  />
-                </div>
+              <h1 className="standartSingleTitle">{item.name}</h1>
+              <div className="standartSingleContainerImg">
+                <img
+                  className="standartSingleImg"
+                  src={item.thumbnail.path + ".jpg"}
+                  alt=""
+                />
               </div>
             </div>
             <div className="standartSingleContent">

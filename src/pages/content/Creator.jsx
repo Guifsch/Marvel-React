@@ -34,15 +34,13 @@ const Creator = () => {
         <div key={item.id} className="standartPrimaryContainer">
           <div className="standartSingleContentContainer">
             <div className="standartSingleThumbnail">
-              <div className="standartSingleContentCard">
-                <h1 className="standartSingleTitle">{item.fullName}</h1>
-                <div className="standartSingleContainerImg">
-                  <img
-                    className="standartSingleImg"
-                    src={item.thumbnail.path + ".jpg"}
-                    alt=""
-                  />
-                </div>
+              <h1 className="standartSingleTitle">{item.fullName}</h1>
+              <div className="standartSingleContainerImg">
+                <img
+                  className="standartSingleImg"
+                  src={item.thumbnail.path + ".jpg"}
+                  alt=""
+                />
               </div>
             </div>
             {item.urls.map((url) => (
@@ -110,10 +108,7 @@ const Creator = () => {
                     className="standartSingleUrlAncor"
                     key={stories.resourceURI}
                   >
-                    <div
-                      className="standartSingleContentText"
-                      role="button"
-                    >
+                    <div className="standartSingleContentText" role="button">
                       {stories.name}
                     </div>
                   </a>
@@ -132,10 +127,7 @@ const Creator = () => {
                     className="standartSingleUrlAncor"
                     key={events.resourceURI}
                   >
-                    <div
-                      className="standartSingleContentText"
-                      role="button"
-                    >
+                    <div className="standartSingleContentText" role="button">
                       {events.name}
                     </div>
                   </a>
