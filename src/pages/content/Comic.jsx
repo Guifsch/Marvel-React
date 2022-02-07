@@ -71,16 +71,18 @@ const Comic = () => {
             )}
 
             <div className="standartSingleContent">
-              {item.textObjects.length > 0
-                ? item.textObjects.map((textObjects) => (
-                    <div
-                      className="standartSingleContentText"
-                      key={textObjects.text}
-                    >
-                      {textObjectsText}
-                    </div>
-                  ))
-                : []}
+              {item.textObjects.length > 0 ? (
+                item.textObjects.map((textObjects) => (
+                  <div
+                    className="standartSingleContentText"
+                    key={textObjects.text}
+                  >
+                    {textObjectsText}
+                  </div>
+                ))
+              ) : (
+                <div className="standartSingleContentText">No description</div>
+              )}
             </div>
 
             <div className="standartSingleContent">
