@@ -54,62 +54,73 @@ const Event = () => {
               </div>
             </div>
 
-            <div className="standartSingleContentTitle">{item.description}</div>
+            <div className="standartSingleContent">
+              {item.description ? (
+                <div className="standartSingleContentTitle">
+                  {item.description}
+                </div>
+              ) : (
+                []
+              )}
+            </div>
 
-            {item.urls.map((url) => (
-              <div key={url.url}>
-                <span className="standartSingleContentText standartSingleMarginRight">
-                  Click
-                </span>
-                <a
-                  className="standartSingleUrl standartSingleContentTitle"
-                  href={url.url}
-                  alt=""
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  here
-                </a>
-                <span className="standartSingleContentText standartSingleMarginLeft">
-                  for {url.type}
-                </span>
-              </div>
-            ))}
+            <div className="standartSingleContent">
+              {item.urls.map((url) => (
+                <div key={url.url}>
+                  <span className="standartSingleContentText standartSingleMarginRight">
+                    Click
+                  </span>
+                  <a
+                    className="standartSingleUrl standartSingleContentTitle"
+                    href={url.url}
+                    alt=""
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  <span className="standartSingleContentText standartSingleMarginLeft">
+                    for {url.type}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-            {item.start != null ? (
-              <div className="standartSinglePages">
-                <h1 className="standartSingleContentTitle">Start:</h1>
-                <span className="standartSingleContentText mx-2">
-                  {startDateFormated}
-                </span>
-              </div>
-            ) : (
-              <div className="standartSinglePages">
-                <h1 className="standartSingleContentTitle">Start:</h1>
-                <span className="standartSingleContentText mx-2">
-                  {" "}
-                  Not avaiable
-                </span>
-              </div>
-            )}
+            <div className="standartSingleContent">
+              {item.start != null ? (
+                <div className="standartSinglePages">
+                  <h1 className="standartSingleContentTitle">Start:</h1>
+                  <span className="standartSingleContentText mx-2">
+                    {startDateFormated}
+                  </span>
+                </div>
+              ) : (
+                <div className="standartSinglePages">
+                  <h1 className="standartSingleContentTitle">Start:</h1>
+                  <span className="standartSingleContentText mx-2">
+                    {" "}
+                    Not avaiable
+                  </span>
+                </div>
+              )}
 
-            {item.end != null ? (
-              <div className="standartSinglePages">
-                <h1 className="standartSingleContentTitle">End:</h1>{" "}
-                <span className="standartSingleContentText mx-2">
-                  {endDateFormated}
-                </span>
-              </div>
-            ) : (
-              <div className="standartSinglePages">
-                <h1 className="standartSingleContentTitle">End:</h1>
-                <span className="standartSingleContentText mx-2">
-                  {" "}
-                  Not avaiable
-                </span>
-              </div>
-            )}
-
+              {item.end != null ? (
+                <div className="standartSinglePages">
+                  <h1 className="standartSingleContentTitle">End:</h1>{" "}
+                  <span className="standartSingleContentText mx-2">
+                    {endDateFormated}
+                  </span>
+                </div>
+              ) : (
+                <div className="standartSinglePages">
+                  <h1 className="standartSingleContentTitle">End:</h1>
+                  <span className="standartSingleContentText mx-2">
+                    {" "}
+                    Not avaiable
+                  </span>
+                </div>
+              )}
+            </div>
             <div className="standartSingleContent">
               <h1 className="standartSingleContentTitle">Creators:</h1>
               {item.creators.available > 0 ? (
@@ -200,7 +211,7 @@ const Event = () => {
               )}
             </div>
 
-            <div className="standartSingleContent">
+            <div>
               <h1 className="standartSingleContentTitle">Series:</h1>
               {item.series.items.length > 0 ? (
                 item.series.items.map((series) => (
