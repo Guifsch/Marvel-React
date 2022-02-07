@@ -43,7 +43,9 @@ const Creator = () => {
                 />
               </div>
             </div>
-            {item.urls.map((url) => (
+
+        <div className="standartSingleContent">
+            {item.urls.map((url) => ( 
               <div key={url.url}>
                 <span className="standartSingleContentText standartSingleMarginRight">
                   Click
@@ -62,6 +64,7 @@ const Creator = () => {
                 </span>
               </div>
             ))}
+            </div>
             <div className="standartSingleContent">
               <h1 className="standartSingleContentTitle">COMICS</h1>
               {item.comics.items.length > 0 ? (
@@ -117,7 +120,7 @@ const Creator = () => {
                 <p className="standartSingleContentText">None</p>
               )}
             </div>
-            <div className="standartSingleContent">
+            <div>
               <h1 className="standartSingleContentTitle">Events</h1>
 
               {item.events.items.length > 0 ? (

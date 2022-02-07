@@ -102,7 +102,7 @@ const Character = () => {
                 <p className="standartSingleContentText">None</p>
               )}
             </div>
-            <div className="standartSingleContent">
+            <div>
               <h1 className="standartSingleContentTitle">Events</h1>
 
               {item.events.items.length > 0 ? (

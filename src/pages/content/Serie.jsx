@@ -45,25 +45,27 @@ const Serie = () => {
                 />
               </div>
             </div>
-            {item.urls.map((url) => (
-              <div key={url.url}>
-                <span className="standartSingleContentText standartSingleMarginRight">
-                  Click
-                </span>
-                <a
-                  className="standartSingleUrl standartSingleContentTitle"
-                  href={url.url}
-                  alt=""
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  here
-                </a>
-                <span className="standartSingleContentText standartSingleMarginLeft">
-                  for {url.type}
-                </span>
-              </div>
-            ))}
+            <div className="standartSingleContent">
+              {item.urls.map((url) => (
+                <div key={url.url}>
+                  <span className="standartSingleContentText standartSingleMarginRight">
+                    Click
+                  </span>
+                  <a
+                    className="standartSingleUrl standartSingleContentTitle"
+                    href={url.url}
+                    alt=""
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  <span className="standartSingleContentText standartSingleMarginLeft">
+                    for {url.type}
+                  </span>
+                </div>
+              ))}
+            </div>
             <div className="standartSingleContent">
               <h1 className="standartSingleContentTitle">Creators:</h1>
               {item.creators.available > 0 ? (
@@ -105,10 +107,9 @@ const Serie = () => {
                     className="standartSingleUrlAncor"
                     key={characters.resourceURI}
                   >
-                    <div
-                      className="standartSingleContentText"
-                      role="button"
-                    ></div>
+                    <div className="standartSingleContentText" role="button">
+                      {characters.name}
+                    </div>
                   </a>
                 ))
               ) : (
@@ -151,7 +152,7 @@ const Serie = () => {
                 <p className="standartSingleContentText">None</p>
               )}
             </div>
-            <div className="standartSingleContent">
+            <div>
               <h1 className="standartSingleContentTitle">Events</h1>
 
               {item.events.items.length > 0 ? (

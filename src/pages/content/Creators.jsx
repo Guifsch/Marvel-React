@@ -54,7 +54,7 @@ const Creators = () => {
       </div>
       {loading ? (
         <ReactLoading
-          type={"spin"}
+          type={"spokes"}
           color={"black"}
           height={"10%"}
           width={"10%"}

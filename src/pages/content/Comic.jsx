@@ -83,6 +83,7 @@ const Comic = () => {
                 : []}
             </div>
 
+            <div className="standartSingleContent">      
             {item.urls.map((url) => (
               <div key={url.url}>
                 <span className="standartSingleContentText standartSingleMarginRight">
@@ -102,7 +103,12 @@ const Comic = () => {
                 </span>
               </div>
             ))}
+            </div>
 
+             <div className="standartSingleContent"> 
+
+
+             
             {item.pageCount > 0 ? (
               <div className="standartSinglePages">
                 <h1 className="standartSingleContentTitle">Pages:</h1>{" "}
@@ -119,6 +125,15 @@ const Comic = () => {
                 </span>
               </div>
             )}
+
+            </div>  
+
+
+
+
+              <div className="standartSingleContent">
+
+
 
             {item.prices.length > 0 ? (
               item.prices.map((prices) => (
@@ -150,6 +165,8 @@ const Comic = () => {
                 </span>
               </div>
             )}
+
+                </div>
 
             <div className="standartSingleContent">
               <h1 className="standartSingleContentTitle">Series:</h1>
@@ -238,7 +255,7 @@ const Comic = () => {
                 <p className="standartSingleContentText">None</p>
               )}
             </div>
-            <div className="standartSingleContent">
+            <div>
               <h1 className="standartSingleContentTitle">Variant:</h1>
               {item.variants.length > 0
                 ? item.variants.map((variants) => (
