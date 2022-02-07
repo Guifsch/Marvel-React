@@ -44,26 +44,26 @@ const Creator = () => {
               </div>
             </div>
 
-        <div className="standartSingleContent">
-            {item.urls.map((url) => ( 
-              <div key={url.url}>
-                <span className="standartSingleContentText standartSingleMarginRight">
-                  Click
-                </span>
-                <a
-                  className="standartSingleUrl standartSingleContentTitle"
-                  href={url.url}
-                  alt=""
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  here
-                </a>
-                <span className="standartSingleContentText standartSingleMarginLeft">
-                  for {url.type}
-                </span>
-              </div>
-            ))}
+            <div className="standartSingleContent">
+              {item.urls.map((url) => (
+                <div key={url.url}>
+                  <span className="standartSingleContentText standartSingleMarginRight">
+                    Click
+                  </span>
+                  <a
+                    className="standartSingleUrl standartSingleContentTitle"
+                    href={url.url}
+                    alt=""
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  <span className="standartSingleContentText standartSingleMarginLeft">
+                    for {url.type}
+                  </span>
+                </div>
+              ))}
             </div>
             <div className="standartSingleContent">
               <h1 className="standartSingleContentTitle">COMICS</h1>

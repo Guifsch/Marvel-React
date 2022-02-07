@@ -83,90 +83,82 @@ const Comic = () => {
                 : []}
             </div>
 
-            <div className="standartSingleContent">      
-            {item.urls.map((url) => (
-              <div key={url.url}>
-                <span className="standartSingleContentText standartSingleMarginRight">
-                  Click
-                </span>
-                <a
-                  className="standartSingleUrl standartSingleContentTitle"
-                  href={url.url}
-                  alt=""
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  here
-                </a>
-                <span className="standartSingleContentText standartSingleMarginLeft">
-                  for <span className="standartUrlType">{url.type}</span>
-                </span>
-              </div>
-            ))}
+            <div className="standartSingleContent">
+              {item.urls.map((url) => (
+                <div key={url.url}>
+                  <span className="standartSingleContentText standartSingleMarginRight">
+                    Click
+                  </span>
+                  <a
+                    className="standartSingleUrl standartSingleContentTitle"
+                    href={url.url}
+                    alt=""
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                  <span className="standartSingleContentText standartSingleMarginLeft">
+                    for <span className="standartUrlType">{url.type}</span>
+                  </span>
+                </div>
+              ))}
             </div>
 
-             <div className="standartSingleContent"> 
-
-
-             
-            {item.pageCount > 0 ? (
-              <div className="standartSinglePages">
-                <h1 className="standartSingleContentTitle">Pages:</h1>{" "}
-                <span className="standartSingleContentText mx-2">
-                  {item.pageCount}
-                </span>
-              </div>
-            ) : (
-              <div className="standartSinglePages">
-                <h1 className="standartSingleContentTitle">Pages:</h1>
-                <span className="standartSingleContentText mx-2">
-                  {" "}
-                  Not avaiable
-                </span>
-              </div>
-            )}
-
-            </div>  
-
-
-
-
-              <div className="standartSingleContent">
-
-
-
-            {item.prices.length > 0 ? (
-              item.prices.map((prices) => (
-                <div
-                  key={prices.type}
-                  className="standartSingleContentText standartSinglePrice"
-                >
-                  <p>
-                    <span className="standartSingleContentTitle">Type:</span>
-                    <span className="standartSingleContentText standartSingleMarginLeft">
-                      {prices.type === "printPrice"
-                        ? "Print price"
-                        : "Digital purchase price"}
-                    </span>
-                  </p>
-                  <p>
-                    <span className="standartSingleContentTitle">Price:</span>
-                    <span className="standartSingleContentText standartSingleMarginLeft">
-                    {new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(prices.price)}
-                    </span>
-                  </p>
+            <div className="standartSingleContent">
+              {item.pageCount > 0 ? (
+                <div className="standartSinglePages">
+                  <h1 className="standartSingleContentTitle">Pages:</h1>{" "}
+                  <span className="standartSingleContentText mx-2">
+                    {item.pageCount}
+                  </span>
                 </div>
-              ))
-            ) : (
-              <div>
-                <span className="standartSingleContentTitle">Price:</span>{" "}
-                <span className="standartSingleContentText standartSingleMarginLeft">
-                  Not avaiable
-                </span>
-              </div>
-            )}
-
+              ) : (
+                <div className="standartSinglePages">
+                  <h1 className="standartSingleContentTitle">Pages:</h1>
+                  <span className="standartSingleContentText mx-2">
+                    {" "}
+                    Not avaiable
+                  </span>
                 </div>
+              )}
+            </div>
+
+            <div className="standartSingleContent">
+              {item.prices.length > 0 ? (
+                item.prices.map((prices) => (
+                  <div
+                    key={prices.type}
+                    className="standartSingleContentText standartSinglePrice"
+                  >
+                    <p>
+                      <span className="standartSingleContentTitle">Type:</span>
+                      <span className="standartSingleContentText standartSingleMarginLeft">
+                        {prices.type === "printPrice"
+                          ? "Print price"
+                          : "Digital purchase price"}
+                      </span>
+                    </p>
+                    <p>
+                      <span className="standartSingleContentTitle">Price:</span>
+                      <span className="standartSingleContentText standartSingleMarginLeft">
+                        {new Intl.NumberFormat("de-DE", {
+                          style: "currency",
+                          currency: "USD",
+                        }).format(prices.price)}
+                      </span>
+                    </p>
+                  </div>
+                ))
+              ) : (
+                <div>
+                  <span className="standartSingleContentTitle">Price:</span>{" "}
+                  <span className="standartSingleContentText standartSingleMarginLeft">
+                    Not avaiable
+                  </span>
+                </div>
+              )}
+            </div>
 
             <div className="standartSingleContent">
               <h1 className="standartSingleContentTitle">Series:</h1>

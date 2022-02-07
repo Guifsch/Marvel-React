@@ -71,12 +71,9 @@ const Series = () => {
       </div>
       <div className="standartMultiGrid">
         {seriesContent.map((item) => (
-          <Link
-            to={`/series/${item.id}`}
-            key={item.id}
-          >
+          <Link to={`/series/${item.id}`} key={item.id}>
             <div className="standartMultiSearchThumbnailContainer">
-            <h1 className="standartMultiSearchTitle">{item.title}</h1>
+              <h1 className="standartMultiSearchTitle">{item.title}</h1>
               <img
                 className="standartMultiSearchThumbnail"
                 src={item.thumbnail.path + ".jpg"}
@@ -86,7 +83,6 @@ const Series = () => {
                   currentTarget.src = ImageNotFound;
                 }}
               />
-              
             </div>
           </Link>
         ))}
